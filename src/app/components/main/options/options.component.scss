@@ -1,0 +1,21 @@
+@import '../../../../../src/assets/styles/linkin.scss';
+
+
+.options{
+  @include  flex(center,column);
+  width:100%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px){
+
+
+}
+
+@media screen and (max-width: 375px){
+
+}

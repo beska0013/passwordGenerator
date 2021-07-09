@@ -1,0 +1,105 @@
+@import '../../../../src/assets/styles/linkin.scss';
+
+
+footer{
+  position: absolute;
+  width:100%;
+  text-align: center;
+  padding: 1em 0;
+  bottom: 0;
+  article{
+    font-family:'SegoeUI',sans-serif;
+    letter-spacing:5px;
+  }
+  .social-links{
+    position:absolute;
+    bottom:0;
+    li{
+      @include square(70px);
+      border: 1px solid $neutralColor;
+      box-shadow: none;
+      filter: none;
+      border-radius: 20px;
+      margin: 1rem;
+      @include flex(center);
+      transition: color 500ms ease-in-out,background-color 500ms ease-in-out;
+      cursor: pointer;
+      animation: turnOn 500ms linear 1s forwards;
+      a{
+        font-family:'FrederickatheGreat-Regular',sans-serif;
+        color: $neutralColor;
+        animation: turnOnLetters 500ms linear 500ms forwards;
+      }
+      &:hover{
+        background-color:$whiteColor;
+        transition: background-color 500ms ease-in-out;
+      }
+      &:hover a{
+        color: $blackColor!important;
+        transition: color 500ms ease-in-out;
+      }
+    }
+    .facebook a, .linkedin a{
+      font-size: 48px;
+    }
+    .upwork a{
+      font-size: 32px;
+    }
+
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  footer {
+    article{
+      p{
+        font-size: 2vw;
+      }
+    }
+    .social-links {
+      li {
+        @include square(9vw);
+        border-radius: 2.5vw;
+        @include flex(center);
+      }
+      .facebook a, .linkedin a {
+        font-size: 6vw;
+      }
+      .upwork a {
+        font-size: 5vw;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  footer {
+    article{
+      p{
+        font-size: 3vw;
+      }
+    }
+    position: static;
+    @include flex(_,column);
+    flex-flow: column-reverse;
+    .social-links {
+      position: static;
+      @include flex(center);
+    }
+  }
+
+}
+
+@media screen and (max-width: 375px){
+  footer {
+    article{
+      p{
+        font-size: 8px;
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,56 @@
+@import "reset.scss";
+@import "mixin.scss";
+@import "variables.scss";
+@import "fonts.scss";
+@import "animations.scss";
+
+
+
+.fade-in {
+  @include size(60px, 40%);
+  @include flex(center);
+  @include border-style;
+  transition: background-color 500ms ease-in-out;
+  animation: smoke-in 1s ease-in-out forwards;
+  &:hover{
+    background-color:$whiteColor;
+    color: $blackColor!important;
+    transition: background-color 500ms ease-in-out;
+  }
+}
+
+.active{
+  color:$whiteColor!important;
+  text-shadow: 0 1px 11px $whiteColor;
+  transition: text-shadow .3s ease-in-out, color .3s ease-in-out;
+}
+
+.status{
+  height:2rem;
+  width:100%;
+  text-align: center;
+  margin: 1rem 0;
+  p{
+    font-family: "JuliusSansOne", sans-serif;
+    text-transform: uppercase;
+    color: #fc0101;
+    animation: smoke-in .5s ease-in-out forwards;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 480px){
+
+
+}
+
+@media screen and (max-width: 375px){
+
+  .fade-in{
+    @include size(60px, 100%);
+    font-size: 16px;
+  }
+}

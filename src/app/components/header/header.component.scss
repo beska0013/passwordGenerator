@@ -1,0 +1,54 @@
+@import '../../../../src/assets/styles/linkin.scss';
+
+
+header{
+text-align: center;
+padding: 1em 0;
+letter-spacing:5px;
+.note{
+  @include flex(center);
+  p{
+    font-family: "JuliusSansOne", sans-serif;
+    width: 700px;
+  }
+}
+  h1{
+    font-family:'JuliusSansOne',sans-serif;
+    font-size:56px;
+  }
+}
+
+@media screen and (max-width: 768px){
+header{
+  h1{
+    font-size: 6vw;
+  }
+  .note{
+    padding: .2em;
+    p{
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+
+ }
+}
+
+@media screen and (max-width: 480px){
+  header{
+    h1{
+     font-size: 24px;
+      p{
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  header{
+    h1{
+      font-size: 6vw;
+    }
+  }
+}
