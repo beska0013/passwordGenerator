@@ -1,0 +1,35 @@
+@mixin flex($spacing : none,$direction : row){
+  display:flex;
+  @if $direction == column{
+    flex-direction: column;
+  }
+  @if $spacing == between{
+    justify-content: space-between;
+  }
+  @else if $spacing == around{
+    justify-content: space-around;
+  }
+  @else if $spacing == center{
+    justify-content:center;
+  }
+  align-items:center;
+}
+
+@mixin size($height,$width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin square($size){
+  width:$size;
+  height:$size;
+}
+
+@mixin border-style{
+  border: 1px solid #FFFFFF;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  font-family:'JuliusSansOne',sans-serif;
+  font-size: 24px;
+}
