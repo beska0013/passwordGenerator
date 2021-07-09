@@ -9,11 +9,21 @@
 
 
 @media screen and (max-width: 768px) {
-
+  .options{
+    .fade-in{
+      @include size(60px,60%);
+      font-size: 4vw;
+    }
+  }
 }
 @media screen and (max-width: 480px){
 
-
+  .options{
+    .fade-in{
+      @include size(60px,100%);
+      font-size: 6vw;
+    }
+  }
 }
 
 @media screen and (max-width: 375px){

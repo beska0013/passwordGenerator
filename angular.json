@@ -59,7 +59,7 @@
             },
             "development": {
               "buildOptimizer": true,
-              "optimization":true,
+              "optimization": true,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
@@ -103,6 +103,10 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }

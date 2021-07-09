@@ -169,4 +169,19 @@ button, select {
   width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .options .fade-in {
+    height: 60px;
+    width: 60%;
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .options .fade-in {
+    height: 60px;
+    width: 100%;
+    font-size: 6vw;
+  }
+}
+
 /*# sourceMappingURL=options.component.css.map */

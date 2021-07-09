@@ -35,6 +35,7 @@ export class GeneratePasswordComponent implements OnInit {
   lowerCheck  = (e:any) => this.lowerValue = e.target.checked;
 
 checkDifficulty(){
+  this.isCopy = false;
   let char = '';
   this.upperValue  ? char += this.alphaUpper : '';
   this.lowerValue  ? char += this.alphaLower : '';
